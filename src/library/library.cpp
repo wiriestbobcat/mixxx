@@ -23,6 +23,7 @@
 #include "library/rekordbox/rekordboxfeature.h"
 #include "library/rhythmbox/rhythmboxfeature.h"
 #include "library/serato/seratofeature.h"
+#include "library/soundcloud/soundcloudfeature.h"
 #include "library/sidebarmodel.h"
 #include "library/trackcollection.h"
 #include "library/trackcollectionmanager.h"
@@ -191,6 +192,11 @@ Library::Library(
             m_pConfig->getValue(
                     ConfigKey(kConfigGroup, "ShowTraktorLibrary"), true)) {
         addFeature(new TraktorFeature(this, m_pConfig));
+    }
+
+    if (m_pConfig->getValue(
+                ConfigKey(kConfigGroup, "ShowSoundCloudLibrary"), true)) {
+        addFeature(new SoundCloudFeature(this, m_pConfig));
     }
 
     // TODO(XXX) Rekordbox feature added persistently as the only way to enable it to
