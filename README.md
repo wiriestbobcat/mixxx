@@ -114,3 +114,16 @@ license.
 [hardware compatibility]: https://manual.mixxx.org/2.3/en/hardware/manuals.html
 [zulip]: https://mixxx.zulipchat.com/
 [discourse]: https://mixxx.discourse.group/
+
+## SoundCloud API Example
+
+A simple example for interacting with the SoundCloud API is available in `tools/soundcloud_api_example.py`. Set the `SOUNDCLOUD_CLIENT_ID` environment variable with your SoundCloud API client ID and run the script with a search query:
+
+```bash
+export SOUNDCLOUD_CLIENT_ID=your_client_id
+python tools/soundcloud_api_example.py "lofi"
+```
+
+### In-Mixxx Integration
+
+To show a SoundCloud library inside Mixxx, set the `SOUNDCLOUD_CLIENT_ID` environment variable before starting Mixxx. Enable the *SoundCloud Library* in preferences or set `ShowSoundCloudLibrary` to `true` in your configuration file.
