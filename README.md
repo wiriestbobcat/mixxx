@@ -126,4 +126,9 @@ python tools/soundcloud_api_example.py "lofi"
 
 ### In-Mixxx Integration
 
-To show a SoundCloud library inside Mixxx, set the `SOUNDCLOUD_CLIENT_ID` environment variable before starting Mixxx. Enable the *SoundCloud Library* in preferences or set `ShowSoundCloudLibrary` to `true` in your configuration file.
+To show a SoundCloud library inside Mixxx, set the `SOUNDCLOUD_CLIENT_ID` environment variable before starting Mixxx. Enable the *SoundCloud Library* in preferences or manually enable it by adding the following lines to your `~/.mixxx/mixxx.cfg` file:
+
+```ini
+[Library]
+ShowSoundCloudLibrary=true
+```
